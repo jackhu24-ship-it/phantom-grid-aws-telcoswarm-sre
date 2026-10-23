@@ -4,9 +4,7 @@
 # Ratified by: Commander Jack Hu x Sec Xiaomi
 # Standard: ASIL-D Functional Safety, Spec-First Four Diagrams & One Table
 
-================================================================================
 TABLE OF CONTENTS
-================================================================================
 1. EXECUTIVE SUMMARY & MISSION PROFILE
 2. SPEC-FIRST FOUR DIAGRAMS & ONE TABLE
    2.1 Figure 1: System Topology Architecture (graph TD)
@@ -18,9 +16,7 @@ TABLE OF CONTENTS
 4. TWO-TRACK CODE EXECUTION CONTRACT
 5. VERIFICATION & THREE CLOSURE GATES
 
-================================================================================
 1. EXECUTIVE SUMMARY & MISSION PROFILE
-================================================================================
 PHANToM GRID :: TelcoSwarm SRE is an enterprise-grade autonomous Site Reliability
 Engineering agent tailored for high-throughput telecommunication backbones.
 By seamlessly marrying AWS Communication Developer Services (AWS End User Messaging,
@@ -35,9 +31,7 @@ Key Metrics:
 - Memory Governance     : 2-Pass ZDR (Zero-Data-Residue) memory scrub (0.000000 MB)
 - Communications Ingress: AWS End User Messaging (EUM) SMS / RCS / Social APIs
 
-================================================================================
 2. SPEC-FIRST FOUR DIAGRAMS & ONE TABLE
-================================================================================
 
 2.1 Figure 1: System Topology Architecture
 Reference file: `mmd/01_telco_swarm_topology.mmd`
@@ -65,5 +59,4 @@ graph TD
     style BA fill:#1e1b4b,stroke:#a855f7,stroke-width:2px,color:#fff
     style CIR fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#fff
     style ZDR fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#fffv
-
 
