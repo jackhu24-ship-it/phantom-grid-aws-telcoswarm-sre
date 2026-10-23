@@ -21,3 +21,7 @@ Thumbs.db
 # PITFALL-35: Heavy Binary Video Lockout
 03_DemoVideo_1440P/*.mp4
 03_DemoVideo_1440P/*.png
+
+# Ignore Heavy Video Masters
+03_DemoVideo_1440P/*.mp4
+03_DemoVideo_1440P/*.png
