@@ -1,0 +1,1 @@
+aws, amazon-bedrock, aws-chime-sdk, python, autonomous-agents, telecommunications

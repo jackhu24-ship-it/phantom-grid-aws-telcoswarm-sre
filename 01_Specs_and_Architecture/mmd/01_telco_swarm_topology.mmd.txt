@@ -1,0 +1,23 @@
+graph TD
+    subgraph Ingress_Layer ["PHASE 1: INGRESS & TELEMETRY"]
+        T1["Telco Network Stream"] --> GW["AWS CDS Event Ingress Gateway"]
+        T2["EUM SMS/RCS Channels"] --> GW
+        T3["CloudWatch Metrics"] --> GW
+    end
+
+    subgraph Intelligence_Kernel ["PHASE 2 & 3: REASONING & ROUTING"]
+        GW --> AD["Real-Time Anomaly Detector (5ms)"]
+        AD --> BA["Amazon Bedrock AgentCore (Claude 3.5 Sonnet)"]
+        BA --> FR["Dynamic Failover Router"]
+    end
+
+    subgraph Outgress_Governance ["PHASE 4: MITIGATION & GOVERNANCE"]
+        FR --> EUM["AWS End User Messaging (Alert Dispatched)"]
+        FR --> CIR["ASIL-D Circuit Breaker (50GB Meltdown Guard)"]
+        CIR --> ZDR["2-Pass ZDR Memory Purge (0.00MB Residue)"]
+    end
+
+    style GW fill:#0f172a,stroke:#00e5ff,stroke-width:2px,color:#fff
+    style BA fill:#1e1b4b,stroke:#a855f7,stroke-width:2px,color:#fff
+    style CIR fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#fff
+    style ZDR fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#fff

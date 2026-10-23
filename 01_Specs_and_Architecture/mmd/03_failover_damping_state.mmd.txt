@@ -1,0 +1,11 @@
+stateDiagram-v2
+    [*] --> NOMINAL_STANDBY : Engine Armed
+    NOMINAL_STANDBY --> TELEMETRY_INGRESS : Network Stream Ingress
+    TELEMETRY_INGRESS --> ANOMALY_ANALYSIS : Latency > 15ms or Loss > 2%
+    ANOMALY_ANALYSIS --> DAMPING_REEVALUATION : Transient Spike Filter
+    DAMPING_REEVALUATION --> NOMINAL_STANDBY : False Alarm Clear
+    DAMPING_REEVALUATION --> AUTO_FAILOVER_ACTIVE : Verified Outage Confirmed
+    AUTO_FAILOVER_ACTIVE --> CIR_BREAKER_INTERCEPT : VRAM >= 50.0GB Spike
+    CIR_BREAKER_INTERCEPT --> ZDR_PURGED_STABLE : Emergency Hard Trip
+    AUTO_FAILOVER_ACTIVE --> ZDR_PURGED_STABLE : Carrier Rerouted Successfully
+    ZDR_PURGED_STABLE --> NOMINAL_STANDBY : Closed-Loop Handshake

@@ -1,0 +1,5 @@
+PROJECT: PHANToM GRID :: TelcoSwarm Autonomous SRE
+TOURNAMENT: AWS CDS Agentic AI Partner Hackathon ($40,000 USD)
+STATUS: DEMO VIDEO RENDERED (1440P 60FPS)
+YOUTUBE_URL: PENDING_UPLOAD_BY_SAPPER (Set to Unlisted / Public)
+INSPECTION: Verified via Incognito Window (HTTP 200 OK)

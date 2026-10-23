@@ -1,0 +1,25 @@
+graph LR
+    subgraph Operational_Envelope ["OPERATIONAL ENVELOPE (NOMINAL)"]
+        N1["Latency < 16.66 ms"]
+        N2["Throughput > 10,000 TPS"]
+        N3["VRAM Usage < 15.0 GB"]
+    end
+
+    subgraph Caution_Zone ["CAUTION BOUNDARY (DAMPING)"]
+        C1["Latency 16.66ms - 45.00ms"]
+        C2["Transient Packet Loss 2% - 5%"]
+        C3["VRAM Usage 15.0GB - 45.0GB"]
+    end
+
+    subgraph Hard_Trip_Boundary ["HARD TRIP BOUNDARY (ASIL-D CRITICAL)"]
+        H1["Latency > 50.00 ms -> E-STOP"]
+        H2["VRAM >= 50.0 GB -> HARD CIRCUIT BREAKER"]
+        H3["Zero Memory Residue -> MANDATORY 2-PASS ZDR"]
+    end
+
+    Operational_Envelope --> Caution_Zone
+    Caution_Zone --> Hard_Trip_Boundary
+
+    style Operational_Envelope fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#fff
+    style Caution_Zone fill:#78350f,stroke:#f59e0b,stroke-width:2px,color:#fff
+    style Hard_Trip_Boundary fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#fff

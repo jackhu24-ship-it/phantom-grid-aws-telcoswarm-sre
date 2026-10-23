@@ -1,0 +1,29 @@
+# PHANToM GRID // PG-MOD-TELCO-SRE :: Step 4 - Black-Box Task Specification
+# Target: AWS CDS Agentic AI Partner Hackathon ($40,000 USD)
+# Standard: ASIL-D Functional Safety Task Contract
+
+module_id: "PG-MOD-TELCO-SRE"
+version: "1.0.0"
+governance: "COMMANDER JACK HU x SEC XIAOMI"
+
+scenarios:
+  scenario_a_golden_path:
+    description: "Continuous nominal telemetry stream verification"
+    total_cycles: 10
+    sla_latency_limit_ms: 16.66
+    expected_carrier: "CARRIER_ALPHA_PRIMARY"
+    expected_status: "ALL_GREEN"
+    max_memory_residue_mb: 0.000000
+
+  scenario_b_chaos_injection:
+    description: "High-stress fault tolerance and dynamic carrier reroute"
+    faults:
+      - fault_id: "FAULT_PACKET_DROP_SPIKE"
+        injected_drop_rate: 0.085
+        expected_action: "FAILOVER_TO_AWS_CDS_SECONDARY"
+      - fault_id: "FAULT_LINE_TIMEOUT"
+        injected_latency_ms: 45.2
+        expected_action: "FAILOVER_TO_AWS_CDS_SECONDARY"
+      - fault_id: "FAULT_VRAM_OVERFLOW"
+        injected_vram_gb: 54.2
+        expected_action: "HARD_CIRCUIT_TRIPPED"

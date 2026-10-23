@@ -1,0 +1,23 @@
+# Python Bytecode & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment Variables & Secrets
+.env
+.env.local
+*.pem
+*.key
+
+# PITFALL-35: Heavy Binary Video Lockout
+03_DemoVideo_1440P/*.mp4
+03_DemoVideo_1440P/*.png

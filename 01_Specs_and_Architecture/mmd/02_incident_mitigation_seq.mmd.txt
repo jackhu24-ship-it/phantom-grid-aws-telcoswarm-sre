@@ -1,0 +1,17 @@
+sequenceDiagram
+    autonumber
+    actor Ops as Telco SRE Operator
+    participant CDS as AWS CDS (EUM/SES)
+    participant Kernel as TelcoSwarm Orchestrator
+    participant Bedrock as Amazon Bedrock Agent
+    participant Safety as ASIL-D Circuit Guard
+
+    CDS->>Kernel: 1. Ingress Telemetry Spike (>15% Drop Rate)
+    Kernel->>Safety: 2. Verify VRAM (< 50GB) & SLA Bound (< 50ms)
+    Safety-->>Kernel: Boundary OK
+    Kernel->>Bedrock: 3. Dispatch Incident Context & Topology Graph
+    Bedrock-->>Kernel: 4. Synthesize Mitigation Plan: Route to Alternate Carrier
+    Kernel->>CDS: 5. Execute AWS End User Messaging (RCS/SMS Alert)
+    Kernel->>Safety: 6. Trigger 2-Pass ZDR Memory Purge
+    Safety-->>Kernel: Residual Memory = 0.000000 MB
+    Kernel-->>Ops: 7. Closed-Loop Incident Resolved Receipt
