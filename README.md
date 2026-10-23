@@ -26,6 +26,10 @@ Modern telecom infrastructure requires sub-millisecond anomaly detection, dynami
 
 ## 2. System Architecture & Dual-Track Topology
 
+<p align="center">
+  <img src="01_Specs_and_Architecture/aws_cds_architecture_diagram_v40.png" alt="PHANToM GRID 2.0 AWS CDS Architecture Diagram v40" width="100%">
+</p>
+
 TelcoSwarm strictly decouples telecom routing from autonomous LLM reasoning:
 
 | Subsystem Component | Operational Scope | Safety & Performance Standard |
