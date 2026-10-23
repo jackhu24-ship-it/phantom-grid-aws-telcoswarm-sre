@@ -1,4 +1,4 @@
-# PHANToM GRID 2.0 // TECHNICAL SPECIFICATION WHITE-PAPER
+﻿# PHANToM GRID 2.0 // TECHNICAL SPECIFICATION WHITE-PAPER
 # Module: PG-MOD-TELCO-SRE :: Autonomous Telco SRE & AWS CDS Orchestrator
 # Target Tournament: AWS CDS Agentic AI Partner Hackathon ($40,000 USD)
 # Ratified by: Commander Jack Hu x Sec Xiaomi
