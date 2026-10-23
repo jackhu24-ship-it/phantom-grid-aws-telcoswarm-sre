@@ -1,14 +1,19 @@
 {
-  "version": "v5.0.0",
-  "timestamp": "2026-10-23 06:28:02",
+  "version": "v5.2.0",
+  "timestamp": "2026-10-23 11:36:09",
+  "memory_tier": "L2_MASTER_WORM_INVARIANT_LEDGER_SSOT",
   "commander": "Commander Jack Hu (Solo HITL Architect)",
   "executive_secretary": "Sec Xiaomi (Second Office / Customs Authority)",
   "dual_sapper_squad": [
     "Sapper Xiao-An (Scaffolding)",
     "Sapper Xiao-Feng (Documentation)"
   ],
-  "memory_architecture_tier": "L2_MODULE_INVARIANT_LEDGER_SSOT",
-  "total_invariants": 38,
+  "architecture_rules": {
+    "L1_tier": "Session Working Memory & Root HANDOFF.md Protocol",
+    "L2_tier": "Master Vault SSOT (08_AuditReceipts) with tournament mirrors",
+    "L3_tier": "Agent Master Skills (video-typography-and-teleprompter-standards)"
+  },
+  "total_invariants": 42,
   "invariants": [
     {
       "id": "PITFALL-01",
@@ -181,6 +186,26 @@
       "status": "LOCKED"
     },
     {
+      "id": "PITFALL-35",
+      "name": "GitHub Camo Proxy Image Cache Deadlock Buster",
+      "status": "LOCKED"
+    },
+    {
+      "id": "PITFALL-36",
+      "name": "PowerShell Unclosed Quote Multiline Prompt Lock Guard",
+      "status": "LOCKED"
+    },
+    {
+      "id": "PITFALL-37",
+      "name": "Windows ANSI CP950 Markdown Encoding Mutilation Guard",
+      "status": "LOCKED"
+    },
+    {
+      "id": "PITFALL-38",
+      "name": "Card Boundary Collision & Visual Hierarchy Inversion Guard",
+      "status": "LOCKED"
+    },
+    {
       "id": "DECREE-PERS-01",
       "name": "Ex-Sapper Permanent Decommission and Total Ban",
       "status": "LOCKED"
@@ -201,6 +226,6 @@
       "status": "LOCKED"
     }
   ],
-  "receipt_id": "PG-RECEIPT-L2-SSOT-0x71899D1C39E69A28",
-  "sha256": "71899d1c39e69a28aa12efad5b9f093d115a50a92e6a3a0dd07892c4de473ae9"
+  "receipt_id": "PG-RECEIPT-3TIER-SOLID-0x11794E4009C56C4B",
+  "sha256": "11794e4009c56c4b5f28a229f09150fd6678e0ac6e1739fc9f6debfabe7c92a8"
 }
